@@ -9,7 +9,7 @@ using ToDoList.Db;
 namespace ToDoList.Db.Migrations
 {
     [DbContext(typeof(ListProblemContext))]
-    [Migration("20221121150025_init")]
+    [Migration("20221122152611_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,6 +26,11 @@ namespace ToDoList.Db.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<bool>("IsCompleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.Property<string>("Name")
                         .IsRequired()

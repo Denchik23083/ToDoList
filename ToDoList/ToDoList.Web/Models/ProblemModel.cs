@@ -1,6 +1,6 @@
-﻿namespace ToDoList.Db.Entities
+﻿namespace ToDoList.Web.Models
 {
-    public class Problem
+    public class ProblemModel
     {
         public int Id { get; set; }
 

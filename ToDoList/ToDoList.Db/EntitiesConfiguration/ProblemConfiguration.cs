@@ -10,6 +10,7 @@ namespace ToDoList.Db.EntitiesConfiguration
         {
             builder.HasKey(_ => _.Id);
             builder.Property(_ => _.Name).IsRequired();
+            builder.Property(_ => _.IsCompleted).IsRequired().HasDefaultValue(false);
         }
     }
 }
